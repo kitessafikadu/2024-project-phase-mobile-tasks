@@ -18,14 +18,26 @@ void main() {
 
     switch (choice) {
       case '1':
+        // Add product
         stdout.write('Enter product name: ');
         String name = stdin.readLineSync()!;
         stdout.write('Enter product description: ');
         String description = stdin.readLineSync()!;
-        stdout.write('Enter product price (e.g., 600.99): ');
-        String priceInput = stdin.readLineSync()!;
-        priceInput = priceInput.replaceAll(RegExp(r'[^0-9.]'), '');
-        double price = double.parse(priceInput);
+
+        double price;
+        while (true) {
+          stdout.write('Enter product price (e.g., 600.99): ');
+          String priceInput = stdin.readLineSync()!;
+          priceInput = priceInput.replaceAll(RegExp(r'[^0-9.]'), '');
+
+          try {
+            price = double.parse(priceInput);
+            break; // Exit the loop if price is valid
+          } catch (e) {
+            print('Invalid input! Please enter a valid number for the price.');
+          }
+        }
+
         manager.addProduct(name, description, price);
         break;
 
@@ -46,8 +58,21 @@ void main() {
         String newName = stdin.readLineSync()!;
         stdout.write('Enter new description: ');
         String newDescription = stdin.readLineSync()!;
-        stdout.write('Enter new price: ');
-        double newPrice = double.parse(stdin.readLineSync()!);
+
+        double newPrice;
+        while (true) {
+          stdout.write('Enter new price: ');
+          String newPriceInput = stdin.readLineSync()!;
+          newPriceInput = newPriceInput.replaceAll(RegExp(r'[^0-9.]'), '');
+
+          try {
+            newPrice = double.parse(newPriceInput);
+            break; // Exit the loop if price is valid
+          } catch (e) {
+            print('Invalid input! Please enter a valid number for the price.');
+          }
+        }
+
         manager.editProduct(editId, newName, newDescription, newPrice);
         break;
 
