@@ -13,7 +13,7 @@ This is a simple command-line eCommerce application that allows users to add, vi
 ## How to Run
 
 1. Ensure you have Dart installed.
-2. Navigate to the `Dart_basic_ecommerce_app` folder and run:
+2. Navigate to the `product-2` folder and run:
 
    ```sh
    dart run bin/main.dart
