@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ecommerce_app/features/auth/presentation/pages/auth_screen.dart';
+import 'package:auth_feature/features/auth/presentation/pages/auth_screen.dart';
 
 void main() {
   testWidgets('Toggles between sign-in/sign-up', (tester) async {

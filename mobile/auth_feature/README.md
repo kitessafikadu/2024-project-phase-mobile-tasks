@@ -18,8 +18,8 @@ flutter doctor
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repo/auth_feature.git
-   cd auth_feature
+   git clone https://github.com/kitessafikadu/2024-project-phase-mobile-tasks.git
+   cd 2024-project-phase-mobile-tasks/mobile/auth_feature
    ```
 2. Install dependencies:
    ```sh
